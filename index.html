@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[YOUR NAME] | Full-Stack Developer</title>
+<meta name="description" content="Portfolio of [YOUR NAME], a Full-Stack Developer building real-time systems, desktop applications, and web platforms end to end.">
+<meta property="og:title" content="[YOUR NAME] | Full-Stack Developer">
+<meta property="og:description" content="Real projects. Real problems solved. React, Node, Laravel, .NET, Supabase.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A0C0F%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 fill=%22%23FFB454%22 font-family=%22monospace%22 text-anchor=%22middle%22>&gt;_</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo"><span class="dot"></span>Rey Rameses Jude III S. Macalutas<span class="mono" style="color:var(--muted-2)">.dev</span></a>
+    <ul class="nav-links">
+      <li><a href="#hero" data-nav>home</a></li>
+      <li><a href="#about" data-nav>about</a></li>
+      <li><a href="#skills" data-nav>skills</a></li>
+      <li><a href="#projects" data-nav>projects</a></li>
+      <li><a href="#experience" data-nav>experience</a></li>
+      <li><a href="#github" data-nav>github</a></li>
+      <li><a href="#contact" data-nav>contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" data-nav>home</a>
+    <a href="#about" data-nav>about</a>
+    <a href="#skills" data-nav>skills</a>
+    <a href="#projects" data-nav>projects</a>
+    <a href="#experience" data-nav>experience</a>
+    <a href="#github" data-nav>github</a>
+    <a href="#contact" data-nav>contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div id="hero-bg"><div class="hero-grid"></div><div class="glow"></div></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="status-pill"><span class="dot"></span>Available for opportunities</div>
+      <div class="hero-hi">$ whoami</div>
+      <h1 class="hero-name">Hi, I'm Rey Rameses Jude III S. Macalutas</h1>
+      <div class="hero-title">Full-Stack Developer</div>
+      <p class="hero-desc">I build scalable, real-time web applications and desktop software — from database schema to socket layer to shipped UI.</p>
+      <div class="hero-loc mono">📍 Purok-2, Sinanguyan, Don Carlos, Bukidnon</div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="https://github.com/rrjmac026" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-outline" href="https://linkedin.com/in/reyramesesjudeiiimacalutas" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener">↓ Resume</a>
+      </div>
+    </div>
+    <div class="terminal reveal">
+      <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">guest@portfolio: ~</span></div>
+      <div id="term-body"></div>
+      <div class="term-input-row">
+        <span class="prompt">$</span>
+        <input id="term-input" class="mono" placeholder="type 'help' and press enter" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">About</div>
+      <h2>Developer. Problem solver. Full-stack builder.</h2>
+      <p>The short version, without the giant paragraph.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="tag-row">
+          <span class="tag">Developer</span><span class="tag">Problem Solver</span><span class="tag">Full-Stack Builder</span><span class="tag">Systematic Debugger</span>
+        </div>
+        <p>[Short biography placeholder — who you are, what got you into software, and what kind of engineer you're becoming. Keep it to 2–3 sentences and replace this text with your own.]</p>
+        <p>[Second paragraph placeholder — what you're focused on right now: the kinds of problems you enjoy, the stack you reach for, and what "done" looks like to you.]</p>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num" data-count="2">0</div><div class="stat-label">Years Building</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="6">0</div><div class="stat-label">Projects</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="12">0</div><div class="stat-label">Technologies</div></div>
+          <div class="stat-card"><div class="stat-num" data-count="0">0</div><div class="stat-label">Repositories</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="about-block"><h4>Philosophy</h4><p>[Placeholder — e.g. "Understand the problem before picking the framework. Ship something real, then make it correct."]</p></div>
+        <div class="about-block"><h4>Career Goals</h4><p>[Placeholder — what kind of role or team you're aiming for next.]</p></div>
+        <div class="about-block"><h4>Education</h4><p>Bachelor of Science in Information Technology · Bukidnon State University · 2026</p></div>
+        <div class="about-block"><h4>Interests</h4><p>Real-time systems, developer tooling, desktop applications, and clean data models.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Tech Stack</div>
+      <h2>Tools I reach for, and why.</h2>
+      <p>Hover a card for context. Labels reflect real usage, not made-up percentages.</p>
+    </div>
+    <div class="skills-tabs" id="skillTabs"></div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Featured Projects</div>
+      <h2>Problem → Solution → Technology → Result</h2>
+      <p>Six projects. Two are real and documented in depth; the rest are placeholders — swap in your own from <code class="mono">data.js</code>.</p>
+    </div>
+    <div class="filter-row" id="filterRow"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ENGINEERING / HOW I BUILD -->
+<section id="engineering">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">How I Build</div>
+      <h2>From problem to production.</h2>
+      <p>The same pipeline, every project.</p>
+    </div>
+    <div class="eng-flow reveal">
+      <div class="eng-step"><div class="n">01</div><div class="t">Problem</div></div><div class="eng-arrow">→</div>
+      <div class="eng-step"><div class="n">02</div><div class="t">Architecture</div></div><div class="eng-arrow">→</div>
+      <div class="eng-step"><div class="n">03</div><div class="t">Implementation</div></div><div class="eng-arrow">→</div>
+      <div class="eng-step"><div class="n">04</div><div class="t">Testing</div></div><div class="eng-arrow">→</div>
+      <div class="eng-step"><div class="n">05</div><div class="t">Deployment</div></div><div class="eng-arrow">→</div>
+      <div class="eng-step"><div class="n">06</div><div class="t">Result</div></div>
+    </div>
+    <div class="case-select" id="caseSelect"></div>
+    <div class="arch-diagram" id="archDiagram"></div>
+
+    <div class="section-head reveal" style="margin-top:64px;">
+      <div class="eyebrow">Live System Status</div>
+      <h2>What's running under the hood</h2>
+    </div>
+    <div class="status-grid reveal">
+      <div class="status-row"><span>API</span><span class="status-right"><span class="dot"></span>Online</span></div>
+      <div class="status-row"><span>Database</span><span class="status-right"><span class="dot"></span>Connected</span></div>
+      <div class="status-row"><span>WebSocket</span><span class="status-right"><span class="dot"></span>Connected</span></div>
+      <div class="status-row"><span>Authentication</span><span class="status-right"><span class="dot"></span>Active</span></div>
+    </div>
+    <div class="sim-note">Simulated status — for demonstration purposes only.</div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience & Journey</div>
+      <h2>Where the time went.</h2>
+      <p>No fabricated roles — projects speak where formal experience doesn't yet.</p>
+    </div>
+    <div class="timeline reveal" id="timeline"></div>
+  </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">For Employers</div>
+      <h2>Why work with me?</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card"><div class="ic">◆</div><h4>Full-Stack Thinking</h4><p>I understand how frontend, backend, databases, APIs, and deployment work together — not just one layer of the stack.</p></div>
+      <div class="why-card"><div class="ic">◆</div><h4>Problem Solving</h4><p>I focus on understanding the problem before choosing the technology.</p></div>
+      <div class="why-card"><div class="ic">◆</div><h4>Real Projects</h4><p>I build complete applications with real bugs, real fixes, and real architecture decisions — not isolated tutorials.</p></div>
+      <div class="why-card"><div class="ic">◆</div><h4>Continuous Learning</h4><p>I continuously experiment with new technologies and go back to improve existing projects.</p></div>
+    </div>
+    <div class="ach-grid reveal">
+      <div class="ach-card">[Hackathon placeholder]</div>
+      <div class="ach-card">[Certification placeholder]</div>
+      <div class="ach-card">[Academic achievement placeholder]</div>
+      <div class="ach-card">[Open-source contribution placeholder]</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION / RESUME -->
+<section id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Education & Resume</div>
+      <h2>Background & credentials</h2>
+    </div>
+    <div class="edu-resume reveal">
+      <div class="edu-card">
+        <h3>[Degree Placeholder]</h3>
+        <div class="school">[University Name] · [Year]</div>
+        <div style="color:var(--muted);font-size:13px;">Relevant coursework:</div>
+        <ul class="edu-list"><li>[Course placeholder]</li><li>[Course placeholder]</li><li>[Course placeholder]</li></ul>
+        <div style="color:var(--muted);font-size:13px;margin-top:14px;">Achievements & certifications:</div>
+        <ul class="edu-list"><li>[Achievement placeholder]</li></ul>
+      </div>
+      <div class="resume-card">
+        <h3 style="font-size:16px;">Resume / CV</h3>
+        <p>The full breakdown of roles, projects, and skills in one document.</p>
+        <a class="btn btn-primary" href="/resume.pdf" download>↓ Download Resume</a>
+        <a class="btn btn-outline" href="/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">GitHub</div>
+      <h2>What's public.</h2>
+      <p>Manually configured fallback data — swap in the real GitHub API response when ready, server-side, never with a token in frontend code.</p>
+    </div>
+    <div class="gh-header reveal">
+      <div class="gh-avatar mono">GH</div>
+      <div>
+        <div class="mono" style="font-size:15px;margin-bottom:4px;">@[YOUR_GITHUB_USERNAME]</div>
+        <div class="gh-meta-row">
+          <span><b>—</b> repositories</span>
+          <span><b>—</b> stars</span>
+          <span><b>—</b> followers</span>
+        </div>
+      </div>
+      <a class="btn btn-outline" style="margin-left:auto;" href="[YOUR_GITHUB_URL]" target="_blank" rel="noopener">View Profile →</a>
+    </div>
+    <div class="repo-grid" id="repoGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2 style="font-size:clamp(26px,4vw,36px);margin-bottom:14px;">Have a project in mind?</h2>
+      <p style="color:var(--muted);font-size:16px;">Let's build something useful.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:macalutasreyramesesjudeiii@gmail.com">✉ macalutasreyramesesjudeiii@gmail.com</a>
+        <a class="contact-link" href="https://github.com/rrjmac026" target="_blank" rel="noopener">⌥ GitHub — rrjmac026</a>
+        <a class="contact-link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">in LinkedIn — Rey Rameses Jude III S. Macalutas</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-success" id="formSuccess">Message captured locally — no email service is connected yet, so nothing was actually sent.</div>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" type="text" required>
+          <div class="error-msg" id="err-name">Please enter your name.</div>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" required>
+          <div class="error-msg" id="err-email">Please enter a valid email.</div>
+        </div>
+        <div class="form-group">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" type="text" required>
+          <div class="error-msg" id="err-subject">Please enter a subject.</div>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" required></textarea>
+          <div class="error-msg" id="err-message">Please enter a message (min 10 characters).</div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+        <div class="form-note">No backend/email service is connected — this form validates and confirms locally only.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">Rey Rameses Jude III S. Macalutas<span class="mono" style="color:var(--muted-2)">.dev</span></div>
+      <div class="footer-built">Built with HTML, CSS & JavaScript · © 2026 Rey Rameses Jude III S. Macalutas</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/rrjmac026" target="_blank" rel="noopener">GitHub</a>
+      <a href="[YOUR_LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:macalutasreyramesesjudeiii@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<div class="modal-overlay" id="modalOverlay"><div class="modal" id="modalContent"></div></div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
