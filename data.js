@@ -54,6 +54,7 @@ const projects = [
     demo:"",
     featured:true,
     status:"Completed",
+    images: ["images/dlis/dlis-1.png", "images/dlis/dlis-2.png", "images/dlis/dlis-3.png", "images/dlis/dlis-4.png", "images/dlis/dlis-5.png", "images/dlis/dlis-6.png"],
     features:[
       "Ordinance amendment, supersession, and repeal tracking with relationship linking",
       "Role-based access control across desktop and web apps",
@@ -126,6 +127,7 @@ const projects = [
     demo:"",
     featured:false,
     status:"Completed",
+    images: ["images/scms/scms-1.png", "images/scms/scms-2.png", "images/scms/scms-3.png", "images/scms/scms-4.png", "images/scms/scms-5.png", "images/scms/scms-6.png"],
     features:["Counseling session records","Referral tracking","Counselor scheduling"],
     challenges:["[Challenge placeholder]"],
     solutionsList:["[Solution placeholder]"],
@@ -145,6 +147,7 @@ const projects = [
     demo:"",
     featured:false,
     status:"Completed",
+    images: ["images/gas/gas-1.png", "images/gas/gas-2.png", "images/gas/gas-3.png", "images/gas/gas-4.png", "images/gas/gas-5.png", "images/gas/gas-6.png"],
     features:["Points and badges system","Leaderboards","Gamified learning modules"],
     challenges:["[Challenge placeholder]"],
     solutionsList:["[Solution placeholder]"],
