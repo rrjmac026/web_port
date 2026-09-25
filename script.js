@@ -1,16 +1,3 @@
-/* =================== THEME =================== */
-const root = document.documentElement;
-const themeToggle = document.getElementById('themeToggle');
-function applyTheme(t){
-  root.setAttribute('data-theme', t);
-  themeToggle.textContent = t === 'light' ? '☀' : '☾';
-  localStorage.setItem('portfolio-theme', t);
-}
-applyTheme(localStorage.getItem('portfolio-theme') || 'dark');
-themeToggle.addEventListener('click', () => {
-  applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-});
-
 /* =================== NAV =================== */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -61,65 +48,6 @@ const statObserver = new IntersectionObserver((entries) => {
   });
 }, {threshold:0.5});
 document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
-
-/* =================== TERMINAL =================== */
-const termBody = document.getElementById('term-body');
-const termInput = document.getElementById('term-input');
-const termCommands = {
-  help: "Available commands: about, projects, skills, contact, clear",
-  about: `${personalInfo.name} — ${personalInfo.title}, based in ${personalInfo.location}.`,
-  projects: () => `${projects.length} projects loaded — see the <span class="hl">Projects</span> section below.`,
-  skills: () => `Stack: ${[...new Set(skills.map(s=>s.name))].slice(0,8).join(' • ')}...`,
-  contact: `Reach out at ${personalInfo.email} or via the contact form below.`,
-  status: "Open to opportunities.",
-  stack: () => [...new Set(skills.filter(s=>s.cat!=='tools').map(s=>s.name))].slice(0,6).join(' • ')
-};
-function termPrint(html, isOutput){
-  const div = document.createElement('div');
-  div.className = isOutput ? 'term-out' : 'term-line';
-  div.innerHTML = html;
-  termBody.appendChild(div);
-  termBody.scrollTop = termBody.scrollHeight;
-}
-function bootTerminal(){
-  const lines = [
-    ['$ whoami', 'Full-Stack Developer'],
-    ['$ stack', 'React • Node.js • Express • Supabase • Laravel • .NET'],
-    ['$ projects', projects.length + ' projects loaded'],
-    ['$ status', 'Open to opportunities']
-  ];
-  let i = 0;
-  function next(){
-    if (i >= lines.length){
-      const hint = document.createElement('div');
-      hint.className = 'term-hint';
-      hint.textContent = "try: help, about, projects, skills, contact";
-      termBody.appendChild(hint);
-      return;
-    }
-    termPrint(`<span class="prompt">$</span> <span class="cmd">${lines[i][0].replace('$ ','')}</span>`, false);
-    termPrint(lines[i][1], true);
-    i++;
-    setTimeout(next, 220);
-  }
-  next();
-}
-bootTerminal();
-termInput.addEventListener('keydown', (e) => {
-  if (e.key !== 'Enter') return;
-  const raw = termInput.value.trim();
-  if (!raw) return;
-  termPrint(`<span class="prompt">$</span> <span class="cmd">${raw}</span>`, false);
-  const cmd = raw.toLowerCase();
-  if (cmd === 'clear'){ termBody.innerHTML = ''; termInput.value=''; return; }
-  const handler = termCommands[cmd];
-  if (handler){
-    termPrint(typeof handler === 'function' ? handler() : handler, true);
-  } else {
-    termPrint(`command not found: ${raw} — type "help"`, true);
-  }
-  termInput.value = '';
-});
 
 /* =================== SKILLS RENDER =================== */
 const skillCats = [['all','All'],['frontend','Frontend'],['backend','Backend'],['database','Database'],['tools','Tools'],['other','Other']];
@@ -310,31 +238,4 @@ repos.forEach(r => {
       <span>${r.updated}</span>
     </div>`;
   repoGrid.appendChild(card);
-});
-
-/* =================== CONTACT FORM =================== */
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let valid = true;
-  const fields = [
-    ['cf-name','err-name', v => v.trim().length > 0],
-    ['cf-email','err-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)],
-    ['cf-subject','err-subject', v => v.trim().length > 0],
-    ['cf-message','err-message', v => v.trim().length >= 10]
-  ];
-  fields.forEach(([id, errId, test]) => {
-    const val = document.getElementById(id).value;
-    const ok = test(val);
-    document.getElementById(errId).classList.toggle('show', !ok);
-    if (!ok) valid = false;
-  });
-  const successEl = document.getElementById('formSuccess');
-  if (valid){
-    successEl.classList.add('show');
-    form.reset();
-    setTimeout(() => successEl.classList.remove('show'), 6000);
-  } else {
-    successEl.classList.remove('show');
-  }
 });

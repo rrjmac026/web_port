@@ -8,7 +8,7 @@
 <meta property="og:title" content="Rey Rameses Jude III S. Macalutas | System Developer">
 <meta property="og:description" content="Real projects. Real problems solved. Laravel, React, .NET, Flutter, PostgreSQL.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A0C0F%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 fill=%22%23FFB454%22 font-family=%22monospace%22 text-anchor=%22middle%22>&gt;_</text></svg>">
+<link rel="icon" type="image/png" href="images/code_logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -19,59 +19,68 @@
 
 <nav id="navbar">
   <div class="container nav-inner">
-    <a href="#hero" class="logo"><span class="dot"></span>Rey Rameses Jude III S. Macalutas<span class="mono" style="color:var(--muted-2)">.dev</span></a>
+    <a href="#hero" class="logo">
+      <span class="logo-mark"><img src="assets/code_logo.png" alt=""></span>
+      RRJ Macalutas
+    </a>
     <ul class="nav-links">
-      <li><a href="#hero" data-nav>home</a></li>
-      <li><a href="#about" data-nav>about</a></li>
-      <li><a href="#skills" data-nav>skills</a></li>
-      <li><a href="#projects" data-nav>projects</a></li>
-      <li><a href="#experience" data-nav>experience</a></li>
-      <li><a href="#github" data-nav>github</a></li>
-      <li><a href="#contact" data-nav>contact</a></li>
+      <li><a href="#hero" data-nav>Home</a></li>
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
     </ul>
     <div class="nav-right">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+      <a class="btn btn-outline btn-cv" href="resume/Resume.pdf" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#hero" data-nav>home</a>
-    <a href="#about" data-nav>about</a>
-    <a href="#skills" data-nav>skills</a>
-    <a href="#projects" data-nav>projects</a>
-    <a href="#experience" data-nav>experience</a>
-    <a href="#github" data-nav>github</a>
-    <a href="#contact" data-nav>contact</a>
+    <a href="#hero" data-nav>Home</a>
+    <a href="#about" data-nav>About</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#contact" data-nav>Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div id="hero-bg"><div class="hero-grid"></div><div class="glow"></div></div>
+  <div id="hero-bg">
+    <img class="hero-bg-img" src="assets/background-image.png" alt="">
+    <!-- <div class="hero-grid"></div> -->
+    <div class="glow"></div>
+  </div>
   <div class="container hero-inner">
-    <div>
-      <div class="status-pill"><span class="dot"></span>Immediate, open to remote work</div>
-      <div class="hero-hi">$ whoami</div>
-      <h1 class="hero-name">Hi, I'm Rey Rameses Jude III S. Macalutas</h1>
-      <div class="hero-title">System Developer | Full-Stack Web &amp; Mobile App Developer</div>
-      <p class="hero-desc">I build scalable, secure systems — from university election platforms to government legislative systems and gamified learning tools — across web, desktop, and mobile.</p>
-      <div class="hero-loc mono">📍 Malaybalay, Bukidnon, Philippines</div>
+    <div class="hero-copy">
+      <div class="hero-hi">Hello, I'm</div>
+      <h1 class="hero-name">Rey Rameses Jude III<br>Macalutas</h1>
+      <div class="hero-title">Full Stack Developer</div>
+      <p class="hero-desc">I build modern web applications with clean code, creative solutions, and a passion for technology — from university election platforms to government legislative systems.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-        <a class="btn btn-outline" href="https://github.com/rrjmac026" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-outline" href="https://linkedin.com/in/rey-rameses-jude-iii-macalutas-751a16405" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="resume/resume.pdf" target="_blank" rel="noopener">↓ Resume</a>
+        <a class="btn btn-primary" href="#projects">
+          View My Projects
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn btn-outline" href="#contact">
+          Get In Touch
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">10+</div><div class="hero-stat-label">Projects Completed</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">Technologies Used</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">1</div><div class="hero-stat-label">Goal: Keep Building</div></div>
       </div>
     </div>
-    <div class="terminal reveal">
-      <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><span class="term-title">guest@portfolio: ~</span></div>
-      <div id="term-body"></div>
-      <div class="term-input-row">
-        <span class="prompt">$</span>
-        <input id="term-input" class="mono" placeholder="type 'help' and press enter" autocomplete="off" spellcheck="false">
-      </div>
+    <div class="hero-visual reveal">
+      <img src="assets/developer.png" alt="Illustration of a developer working at a desk, surrounded by React, Node.js, Laravel, and Flutter icons" class="hero-visual-img">
     </div>
   </div>
+  <a href="#about" class="scroll-cue"><span>Scroll Down</span><i></i></a>
 </section>
 
 <!-- ABOUT -->
