@@ -389,3 +389,178 @@ footer{padding:44px 0;}
 .progress-bar{position:fixed;top:0;left:0;height:2px;background:var(--amber);z-index:1100;transition:width .1s linear;width:0%;}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
 .reveal.in{opacity:1;transform:translateY(0);}
+
+/* =================== RESPONSIVE / MOBILE REFINEMENTS =================== */
+
+/* Base container padding scales down on small screens */
+@media (max-width:600px){
+  .container{padding:0 18px;}
+}
+@media (max-width:380px){
+  .container{padding:0 14px;}
+}
+
+/* Section spacing shrinks on mobile so pages don't feel bloated */
+@media (max-width:860px){
+  section{padding:70px 0;}
+  .section-head{margin-bottom:36px;}
+}
+@media (max-width:480px){
+  section{padding:52px 0;}
+  .section-head{margin-bottom:28px;}
+  .section-head p{font-size:14.5px;}
+}
+
+/* ---------- NAV ---------- */
+@media (max-width:480px){
+  .nav-inner{height:58px;}
+  .logo{font-size:14px;}
+  .logo .dot{width:7px;height:7px;}
+}
+
+/* ---------- HERO ---------- */
+@media (max-width:900px){
+  #hero{padding-top:96px;padding-bottom:56px;min-height:auto;}
+  .hero-inner{gap:40px;}
+}
+@media (max-width:600px){
+  #hero{padding-top:84px;padding-bottom:44px;}
+  .hero-name{font-size:clamp(30px,9vw,42px);}
+  .hero-title{font-size:clamp(15px,4.2vw,18px);}
+  .hero-desc{font-size:15px;max-width:100%;}
+  .hero-actions{gap:10px;}
+  .hero-actions .btn{flex:1 1 calc(50% - 5px);justify-content:center;padding:12px 14px;font-size:12.5px;}
+  .glow{width:320px;height:320px;filter:blur(90px);top:-80px;right:-60px;}
+}
+@media (max-width:380px){
+  .hero-actions .btn{flex:1 1 100%;}
+  .status-pill{font-size:11px;padding:5px 10px;}
+}
+
+/* terminal shrinks and never overflows on small phones */
+@media (max-width:600px){
+  #term-body{min-height:200px;max-height:260px;padding:14px 12px;font-size:12px;}
+  .term-input-row{padding:9px 12px;}
+  #term-input{font-size:12px;}
+}
+
+/* ---------- ABOUT ---------- */
+@media (max-width:600px){
+  .stats-grid{gap:10px;margin-top:26px;}
+  .stat-card{padding:14px 10px;}
+  .stat-num{font-size:24px;}
+  .stat-label{font-size:10.5px;}
+  .about-block{padding:14px 16px;}
+  .tag-row{gap:8px;}
+  .tag{font-size:11px;padding:6px 10px;}
+}
+@media (max-width:340px){
+  .stats-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ---------- SKILLS ---------- */
+@media (max-width:600px){
+  .skills-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+  .skill-card{padding:12px;}
+  .skill-tab{padding:7px 12px;font-size:11.5px;}
+  /* Descriptions rely on :hover which mobile can't reach — always show them */
+  .skill-desc{max-height:80px;opacity:1;margin-top:8px;}
+}
+
+/* ---------- PROJECTS ---------- */
+@media (max-width:600px){
+  .projects-grid{grid-template-columns:1fr;gap:16px;}
+  .filter-row{gap:6px;margin-bottom:22px;}
+  .filter-btn{padding:7px 12px;font-size:11.5px;}
+  .project-body{padding:14px 14px 16px;}
+  .project-body h3{font-size:15.5px;}
+}
+
+/* modal becomes a near-full-screen sheet on phones */
+@media (max-width:700px){
+  .modal-overlay{padding:0;align-items:flex-end;}
+  .modal{
+    max-width:100%;width:100%;max-height:92vh;overflow-y:auto;
+    border-radius:16px 16px 0 0;
+    animation:modalInMobile .22s ease;
+  }
+  @keyframes modalInMobile{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  .modal-head{padding:16px 18px;position:sticky;top:0;background:var(--panel);z-index:1;}
+  .modal-head h3{font-size:17px;}
+  .modal-body{padding:18px;}
+  .gallery-nav{width:28px;height:28px;}
+}
+
+/* ---------- ENGINEERING / HOW I BUILD ---------- */
+@media (max-width:760px){
+  .eng-step{min-width:0;flex:1 1 calc(50% - 8px);padding:12px 10px;}
+  .eng-flow{gap:8px;}
+  .eng-arrow{display:none;}
+}
+@media (max-width:600px){
+  .case-select{gap:6px;}
+  .case-tab{padding:7px 12px;font-size:11.5px;}
+  .arch-box{min-width:0;width:100%;padding:10px 14px;font-size:12px;}
+  .status-grid{gap:10px;}
+  .status-row{padding:13px 14px;font-size:12px;}
+}
+
+/* ---------- GITHUB ---------- */
+@media (max-width:600px){
+  .gh-header{gap:12px;}
+  .gh-avatar{width:46px;height:46px;}
+  .gh-meta-row{gap:12px;font-size:12px;}
+  .gh-header .btn{margin-left:0 !important;width:100%;justify-content:center;}
+  .repo-grid{grid-template-columns:1fr;gap:10px;}
+  .repo-card{padding:14px 16px;}
+}
+
+/* ---------- TIMELINE ---------- */
+@media (max-width:600px){
+  .timeline{padding-left:20px;}
+  .tl-item::before{left:-20px;}
+  .tl-role{font-size:14.5px;}
+  .tl-desc{font-size:13px;}
+}
+
+/* ---------- WHY HIRE / ACHIEVEMENTS ---------- */
+@media (max-width:600px){
+  .why-grid{grid-template-columns:1fr;gap:12px;}
+  .why-card{padding:18px;}
+  .ach-grid{grid-template-columns:1fr;gap:10px;margin-top:26px;}
+  .ach-card{padding:14px;font-size:12px;}
+}
+
+/* ---------- EDUCATION / RESUME ---------- */
+@media (max-width:600px){
+  .edu-resume{gap:16px;}
+  .edu-card,.resume-card{padding:18px;}
+  .edu-card h3{font-size:15.5px;}
+  .resume-card .btn{width:100%;justify-content:center;}
+}
+
+/* ---------- CONTACT ---------- */
+@media (max-width:600px){
+  .contact-grid{gap:32px;}
+  .contact-link{padding:12px 14px;font-size:12.5px;}
+  .form-group input,.form-group textarea{padding:11px 12px;font-size:16px;} /* 16px prevents iOS auto-zoom */
+  button.btn-primary{font-size:12.5px;}
+}
+
+/* ---------- FOOTER ---------- */
+@media (max-width:600px){
+  footer{padding:32px 0;}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:18px;}
+  .footer-links{gap:14px;flex-wrap:wrap;}
+}
+
+/* ---------- MISC ---------- */
+@media (max-width:600px){
+  .back-top{width:40px;height:40px;bottom:16px;right:16px;}
+}
+
+/* Ensure nothing can force horizontal scroll on narrow viewports */
+@media (max-width:480px){
+  html,body{overflow-x:hidden;width:100%;}
+  .hero-inner,.about-grid,.contact-grid,.edu-resume{max-width:100%;}
+}
