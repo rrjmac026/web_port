@@ -257,7 +257,7 @@ const experience = [
 ];
 
 const repos = [
-  {name:"LLOIS", desc:"WPF desktop app for the DLIS legislative ordinance management system.", lang:"C#", color:"#178600", stars:"—", forks:"—", updated:"Sep 2026"},
+  {name:"dlis", desc:"WPF desktop app for the DLIS legislative ordinance management system.", lang:"C#", color:"#178600", stars:"—", forks:"—", updated:"Sep 2026"},
   {name:"dlis-web", desc:"Web companion to DLIS, sharing one database with the desktop app.", lang:"TypeScript", color:"#3178c6", stars:"—", forks:"—", updated:"Sep 2026"},
   {name:"buksu_comelec2k26", desc:"BukSU Comelec Voting System v2 (2026) — Laravel election management system.", lang:"PHP", color:"#4F5D95", stars:"—", forks:"—", updated:"—"},
   {name:"TCMS", desc:"Multi-tenant training course management system built with Laravel.", lang:"PHP", color:"#4F5D95", stars:"—", forks:"—", updated:"—"},
